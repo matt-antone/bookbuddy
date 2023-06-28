@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 import { rateLimiter } from '@/lib/rate-limiter'
 
 // This function can be marked `async` if using `await` inside
-export async function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   const ip = req.ip ?? '127.0.0.1'
 
   try {
